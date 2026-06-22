@@ -3,3 +3,4 @@ ollama
 matplotlib
 fastapi
 uvicorn
+streamlit

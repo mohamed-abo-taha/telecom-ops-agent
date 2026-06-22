@@ -7,11 +7,17 @@ the tool results. Served via FastAPI, fully local via Ollama, no API keys.
 
 ![architecture](assets/architecture.png)
 
+## The app
+A small Streamlit UI over the same agent: ask a question, see the tools it called and the grounded answer.
+
+![demo](assets/demo.png)
+
 ## Run
     pip install -r requirements.txt
     python src/db.py               # seed the customer DB
     python src/agent.py "Customer C001 is abroad for 5 days, is roaming covered and what is their balance?"
-    uvicorn src.api:app            # POST /ask {"question": "..."}
+    python -m streamlit run app.py # web UI (shown above)
+    uvicorn src.api:app            # or the API: POST /ask {"question": "..."}
 
 ## Example
 **Q:** Customer C001 is traveling abroad for 5 days. Is roaming covered, and what is their balance?
