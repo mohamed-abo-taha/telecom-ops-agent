@@ -1,6 +1,5 @@
 langchain-core
 ollama
-matplotlib
 fastapi
 uvicorn
 streamlit
